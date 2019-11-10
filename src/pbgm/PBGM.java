@@ -1,9 +1,9 @@
 
 package pbgm;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  *
@@ -112,11 +112,23 @@ public PBGM ( int v){
                                       { 6, 8, 0, 0, 9 }, 
                                       { 0, 5, 7, 9, 0 } }; 
         
+        System.out.println(graph.length);
         
-        BufferedReader reader =
-                   new BufferedReader(new InputStreamReader(System.in));
-        String name = reader.readLine();
-        System.out.println(name);       
+        int numVert;
+
+        Scanner ler = new Scanner(System.in); // pega o número de vértices
+        numVert = Integer.parseInt(ler.nextLine());
+            
+        
+        
+        
+        
+		
+        for (int i = 0; i < numVert; i++) {
+			         System.out.println(ler.nextLine());
+		}
+
+		ler.close();    
   
         // Print the solution 
         t.primMST(graph); 
